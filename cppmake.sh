@@ -7,7 +7,7 @@ cat > Makefile << EOF
 NAME = $NAME
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MF
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ_DIR = obj
 
@@ -22,7 +22,7 @@ all: \$(NAME)
 	@mkdir -p \$(OBJ_DIR)
 
 \$(OBJ_DIR)/%.o: %.cpp | \$(OBJ_DIR)
-	@\$(CC) \$(CFLAGS) \$(@:.o=.d) -c \$< -o \$@
+	@\$(CC) \$(CFLAGS) -MMD -MF \$(@:.o=.d) -c \$< -o \$@
 
 \$(NAME): \$(OBJ_DIR) \$(OBJ)
 	@\$(CC) \$(CFLAGS) \$(OBJ) -o \$(NAME)
