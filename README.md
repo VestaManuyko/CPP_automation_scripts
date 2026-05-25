@@ -1,4 +1,3 @@
-*Work in progress*
 # C++ projects automation shell scripts
 
 ## Description
@@ -23,4 +22,13 @@ chmod +x cppmake.sh
 The example for cpp00 ex00 the Makefile generation could be launched like this:
 ```
 ./cppmake.sh megaphone megaphone.cpp
+```
+- Generate a hpp file with a class in orthodox canonical form, run:
+```
+chmod +x hppclass.sh
+./hppclass.sh <filename.hpp> <class name>
+```
+For example, for cpp02 ex00:
+```
+./hppclass.sh Fixed.hpp Fixed
 ```
