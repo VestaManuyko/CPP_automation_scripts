@@ -3,6 +3,8 @@
 NAME=$1
 shift
 
+touch $@
+
 cat > Makefile << EOF
 NAME = $NAME
 
