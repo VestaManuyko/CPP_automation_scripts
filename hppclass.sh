@@ -1,8 +1,8 @@
 #!/bin/bash
 
-FILENAME=$1
-CLASS=$2
-upper=$(printf "%s" "$1" | tr '[:lower:]' '[:upper:]'| tr '.' '_')
+CLASS=$1
+FILENAME="${CLASS}.hpp"
+upper=$(printf "%s" "$FILENAME" | tr '[:lower:]' '[:upper:]'| tr '.' '_')
 
 cat > $FILENAME << EOF
 #ifndef $upper
