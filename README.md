@@ -26,9 +26,18 @@ The example for cpp00 ex00 the Makefile generation could be launched like this:
 - Generate a hpp file with a class in orthodox canonical form, run:
 ```
 chmod +x hppclass.sh
-./hppclass.sh <filename.hpp> <class name>
+./hppclass.sh <class name>
 ```
 For example, for cpp02 ex00:
 ```
-./hppclass.sh Fixed.hpp Fixed
+./hppclass.sh Fixed
+```
+- Generate a cpp file, with empty constructors/destructors(could be filled later based on requirements), run:
+```
+chmod +x cppfile.sh
+./cppfile.sh <class_name>
+```
+Foe example, for cpp03 ex00:
+```
+./cppfile.sh ClapTrap
 ```
