@@ -18,7 +18,7 @@ $CLASS::$CLASS(const $CLASS& other)
 
 $CLASS& $CLASS::operator=(const $CLASS& other)
 {
-	return ;
+	return (*this);
 }
 
 $CLASS::~$CLASS()
