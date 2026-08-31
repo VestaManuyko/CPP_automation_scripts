@@ -26,7 +26,7 @@ all: \$(NAME)
 \$(OBJ_DIR)/%.o: %.cpp | \$(OBJ_DIR)
 	@\$(CC) \$(CFLAGS) -MMD -MF \$(@:.o=.d) -c \$< -o \$@
 
-\$(NAME): \$(OBJ_DIR) \$(OBJ)
+\$(NAME): \$(OBJ) | \$(OBJ_DIR)
 	@\$(CC) \$(CFLAGS) \$(OBJ) -o \$(NAME)
 
 clean:
