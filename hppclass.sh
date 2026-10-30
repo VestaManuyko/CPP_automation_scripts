@@ -19,4 +19,3 @@ class $CLASS
 
 #endif
 EOF
-
